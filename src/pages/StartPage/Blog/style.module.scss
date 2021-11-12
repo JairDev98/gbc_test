@@ -1,0 +1,75 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: 425px) {
+        width: 550px;
+      }
+}
+
+.containerTitle{
+    margin: 0 13rem;
+
+    h2{
+        text-align: center;
+        font-size: 16px;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        color: var(--blue-font)
+    }
+
+    p{
+        text-align: center;
+        font-size: 8px;
+        line-height: 1.8;
+        color: var(--gray-font)
+    }
+
+    @media (max-width: 425px) {
+        margin: 0 7rem;
+      }
+}
+
+
+.carousel{
+    margin: 2rem 0rem; 
+    width: 100%;
+}
+
+.iconActiveLeft{
+    cursor: pointer;
+    width: 45px;
+    height: 100%;
+    color: purple;
+    transition: all 0.3s ease;
+    margin: 2px;
+    padding: 10px;
+}
+
+.iconActiveRight{
+    cursor: pointer;
+    width: 45px;
+    height: 100%;
+    color: purple;
+    transition: all 0.3s ease;
+    margin: 2px;
+    padding: 10px;
+}
+
+.iconInactive{
+    width: 45px;
+    height: 100%;
+    color: transparent;
+    transition: all 0.3s ease;
+    margin: 2px;
+    padding: 10px;
+}
+
+.iconActiveLeft:hover{
+    transform: translateX(-8px);
+}
+
+.iconActiveRight:hover{
+    transform: translateX(8px);
+}
+

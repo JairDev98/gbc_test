@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    background: url("../../assets/bloco_final_image.svg") no-repeat right;
+    background-size: 45%;
+    padding: 7%;
+    
+    @media (max-width: 425px) {
+        width: 550px;
+      }
+}
+
+.containerSearch{
+    display: flex;
+    width: 300px;
+    margin: 3rem 0 4rem 1rem;
+}
+
+.containerSubmit{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    h2{
+        font-size: 18px;
+        color: var(--blue-font);
+    }
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: flex-end;
+    input{
+        border-radius: 3px;
+        font-size: 8px;
+        width: 300px;
+        height: 25px;
+        border: 0.5px solid var(--blue-font);
+        margin-top: 0.7rem;
+        text-indent: 5%;
+    }
+}
+
+.buttonSearch{
+    margin-left: 2px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}

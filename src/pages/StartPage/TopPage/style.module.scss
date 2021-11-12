@@ -1,0 +1,60 @@
+.container{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    background: url("../../../assets/Illustration.svg") no-repeat right;
+    background-size: 60%;
+    
+    @media (max-width: 425px) {
+        width: 550px;
+        background-size: 72%;
+      }
+}
+
+.containerSearch{
+    display: flex;
+    width: 200px;
+    margin: 5rem 0 3.8rem 4rem;
+}
+
+.containerSubmit{
+    display: flex;
+    width: 162px;
+    flex-direction: column;
+    h2{
+        color: var(--blue-font);
+    }
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    input{
+        border-radius: 3px;
+        font-size: 8px;
+        width: 300px;
+        height: 25px;
+        border: 0.5px solid var(--blue-font);
+        margin-top: 0.7rem;
+        text-indent: 5%;
+    }
+}
+
+.buttonSearch{
+    cursor: pointer;
+    display: flex;
+    height: 25px;
+    width: 25px;
+    padding: 4%;
+    align-items: center;
+    background-color: var(--lime-green);
+    border-radius: 3px;
+    margin-top: 54%;
+    margin-left: 3%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.buttonSearch:hover{
+    filter: brightness(0.9);
+}

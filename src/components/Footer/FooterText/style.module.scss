@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+
+    @media (max-width: 425px) {
+        width: 500px;
+      }
+}
+
+.copyrightsContainer{
+    font-weight: 700;
+    font-size: 9px;
+    color: var(--blue-font);
+}
+
+.privacyContainer{
+    color: var(--gray-font);
+    font-size: 9px;
+    span{
+        margin-left: 1rem;
+    }
+}

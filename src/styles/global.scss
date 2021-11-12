@@ -1,0 +1,22 @@
+:root{
+    --black: #121212;
+    --lime-green: #bcdb5c;
+    --pear-green: #96AF49;
+    --blue-font: #1d1649;
+    --gray-font: #9f9da8;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Open sans', sans-serif;
+}
+
+body{
+    background-color: var(--gray-150);
+}
+
+a{
+    cursor: pointer;
+}

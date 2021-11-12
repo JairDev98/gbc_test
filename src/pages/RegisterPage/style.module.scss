@@ -1,0 +1,97 @@
+.containerForm{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 3rem;
+    border-radius: 5px;
+    padding: 3%;
+    background-color: var(--pear-green);
+
+    h4{
+        font-size: 8px;
+        color: var(--blue-font);
+        margin-top: 2px;
+
+        @media (max-width: 425px) {
+            font-size: 35px;
+          }
+    }
+
+    input{
+        margin-top: 2px;
+        border-radius: 8px;
+        font-size: 8px;
+        height: 25px;
+        border: 0.5px solid var(--blue-font);
+        text-indent: 0.5rem;
+
+        @media (max-width: 425px) {
+            font-size: 35px;
+            height: 50px;
+          }
+    }
+
+    @media (max-width: 425px) {
+        width: 550px;
+        margin: 0;
+      }
+}
+
+.inputShort{
+    width: 40%;
+
+    @media (max-width: 425px) {
+        width: 60%;
+      }
+}
+
+.inputLong{
+    width: 90%;
+}
+
+.registerTitle{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 5px;
+    color: var(--blue-font);
+
+    @media (max-width: 425px) {
+        font-size: 35px;
+      }
+}
+
+.addressTitle{
+    font-size: 12px;
+    margin-top: 5px;
+    color: var(--blue-font);
+
+    @media (max-width: 425px) {
+        font-size: 40px;
+        margin-top: 40px;
+      }
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.buttonStyle{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    @media (max-width: 425px) {
+        font-size: 40px;
+      }
+}
+
+.buttonStyle:hover{
+    filter: brightness(0.9);
+}
+
+.errorContainer{
+    font-weight: bold;
+    font-size: 10px;
+    color: red;
+}

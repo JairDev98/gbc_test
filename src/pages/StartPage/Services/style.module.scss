@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    background: url("../../../assets/bloco_services.svg") no-repeat left;
+    background-size: 60%;
+    padding: 17%;
+    
+    @media (max-width: 425px) {
+        width: 550px;
+        background-size: 72%;
+      }
+}
+
+.containerButton{
+    margin-left: 15rem;
+}
+
+.containerText{
+    margin-top: -3rem;
+    
+    width: 225px;
+    h4{
+        color: var(--blue-font)
+    }
+    p{
+        font-size: 9px;
+        margin: 1rem 0;
+        color: var(--gray-font)
+    }
+}
