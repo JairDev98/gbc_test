@@ -3,9 +3,8 @@
     box-sizing: border-box;
     width: 250px;
     height: 110px;
+    margin: 1rem auto;
     border-radius: 3px;
-    margin: auto;
-    margin-bottom: 2rem;
     box-shadow: 0px 12px 25px 0px gray;
     transition: all 0.2s ease;
 }
@@ -17,6 +16,7 @@
 .cardPhoto{
     display: flex;
     width: 9rem;
+    margin-left: 0;
 }
 
 .cardTextButton{
