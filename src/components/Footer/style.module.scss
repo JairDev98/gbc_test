@@ -3,10 +3,19 @@
     box-sizing: border-box;
     flex-direction: column;
     background: url("../../assets/bloco_final_image.svg") no-repeat right;
-    background-size: 45%;
+    background-size: 25%;
     padding: 7%;
+
+    @media (max-width: 1440px) {
+        background-size: 30%;
+    }
+
+    @media (max-width: 1024px) {
+        background-size: 40%;
+    }
     
     @media (max-width: 425px) {
+        background-size: 47%;
         width: 550px;
       }
 }

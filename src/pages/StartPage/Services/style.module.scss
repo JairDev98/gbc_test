@@ -3,8 +3,20 @@
     box-sizing: border-box;
     flex-direction: column;
     background: url("../../../assets/bloco_services.svg") no-repeat left;
-    background-size: 60%;
+    background-size: 16%;
     padding: 17%;
+    
+    @media (max-width: 1440px) {
+        background-size: 30%;
+    }
+
+    @media (max-width: 1024px) {
+        background-size: 40%;
+    }
+
+    @media (max-width: 768px) {
+        background-size: 60%;
+    }
     
     @media (max-width: 425px) {
         width: 550px;

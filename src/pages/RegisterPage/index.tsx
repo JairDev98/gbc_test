@@ -56,10 +56,10 @@ function RegisterPage(){
           localStorage.setItem('@birth', data.birth);
           localStorage.setItem('@document', data.document);
           localStorage.setItem('@cep', data.cep);
-          localStorage.setItem('@road', data.road);
-          localStorage.setItem('@district', data.district);
-          localStorage.setItem('@city', data.city);
-          localStorage.setItem('@uf', data.uf);
+          localStorage.setItem('@road', adress.logradouro);
+          localStorage.setItem('@district', adress.bairro);
+          localStorage.setItem('@city', adress.localidade);
+          localStorage.setItem('@uf', adress.uf);
           localStorage.setItem('@number', data.number);
           localStorage.setItem('@complement', data.complement);
 
@@ -67,10 +67,10 @@ function RegisterPage(){
           document.cookie=`birth=${data.birth}`
           document.cookie=`document=${data.document}`
           document.cookie=`cep=${data.cep}`
-          document.cookie=`road=${data.road}`
-          document.cookie=`district=${data.district}`
-          document.cookie=`city=${data.city}`
-          document.cookie=`uf=${data.uf}`
+          document.cookie=`road=${adress.logradouro}`
+          document.cookie=`district=${adress.bairro}`
+          document.cookie=`city=${adress.localidade}`
+          document.cookie=`uf=${adress.uf}`
           document.cookie=`number=${data.number}`
           document.cookie=`complement=${data.complement}`
 
@@ -123,7 +123,7 @@ function RegisterPage(){
                 mask="99999-999"
                 className={styles.inputShort}
                 {...register("cep", {required: true})}
-                onChange={ e => { setCep(e.target.value) }}
+                onChange={ e => { setCep(e.target.value)}}
             />
             <div className={styles.errorContainer}>
                 {errors.cep?.type==='required' && 'COLOQUE O SEU CEP'}

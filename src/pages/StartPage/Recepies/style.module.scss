@@ -2,7 +2,6 @@
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    background-size: 60%;
     
     @media (max-width: 425px) {
         width: 550px;
@@ -28,7 +27,7 @@
     }
 
     @media (max-width: 425px) {
-        margin: 0 7rem;
+        margin: 0 2rem;
       }
 }
 
@@ -39,6 +38,7 @@
 
     @media (max-width: 425px) {
         margin: 1rem 1rem;
+        grid-template-columns: 1fr;   
       }
 }
 
