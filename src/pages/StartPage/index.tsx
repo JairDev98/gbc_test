@@ -1,18 +1,18 @@
-import { TopPage } from './TopPage';
-import { Recepies } from './Recepies';
-import { Services } from './Services';
-import { Blog } from './Blog';
+import { TopPage } from './TopPage_block';
+import { Recepies } from './Recepies_block';
+import { Services } from './Services_block';
+import { Blog } from './Blog_block';
 import { Footer } from '../../components/Footer';
 
 function StartPage() {
   return (
-    <div>
+    <>
       <TopPage />
       <Recepies />
       <Services />
       <Blog />
       <Footer />
-    </div>
+    </>
   );
 }
 

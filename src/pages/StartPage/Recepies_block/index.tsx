@@ -38,6 +38,7 @@ export function Recepies(){
     ]
 
    return(
+       <>
     <div className={styles.container}>
         <div className={styles.containerTitle}>
             <h2>Our Best Recipes</h2>
@@ -53,6 +54,7 @@ export function Recepies(){
                 <Card id={card.id} photo={card.photo} title={card.title} />
             ))}
         </div>
-</div>
+    </div>
+        </>
    )
 }

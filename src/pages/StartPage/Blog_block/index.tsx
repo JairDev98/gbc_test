@@ -51,6 +51,7 @@ export function Blog(){
         },
     ]
     return(
+        <>
         <div className={styles.container}>
         <div className={styles.containerTitle}>
             <h2>Read Our Blog</h2>
@@ -96,5 +97,6 @@ export function Blog(){
                 </Carousel>
         </div>
         </div>
+        </>
     )
 }

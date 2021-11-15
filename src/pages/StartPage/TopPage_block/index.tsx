@@ -6,6 +6,7 @@ import styles from './style.module.scss';
 
 export function TopPage(){
     return(
+        <>
         <div className={styles.container}>
             <Menu title="REGISTER" url="/registerPage" />
 
@@ -21,5 +22,6 @@ export function TopPage(){
                     </div>
         </div>
         </div>
+        </>
     )
 }

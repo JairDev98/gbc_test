@@ -4,6 +4,7 @@ import styles from './style.module.scss';
 
 export function Services(){
     return(
+        <>
         <div className={styles.container}>
             <div className={styles.containerButton}>
                 <div className={styles.containerText}>
@@ -30,5 +31,6 @@ export function Services(){
                 <Button text={"Know More"}/>
             </div>
         </div>
+        </>
     )
 }

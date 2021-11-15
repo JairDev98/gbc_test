@@ -11,6 +11,7 @@ interface CardProps {
 
 export function Card({ id, photo, title }: CardProps){
     return(
+        <>
         <div key={id} className={styles.card}>
             <div className={styles.cardPhoto}>
                 <img src={photo} alt={photo} />
@@ -21,5 +22,6 @@ export function Card({ id, photo, title }: CardProps){
                 <Button text={"See Recipe"} />
             </div>
         </div>
+        </>
     )
 }

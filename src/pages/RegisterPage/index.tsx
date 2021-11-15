@@ -4,6 +4,8 @@ import InputMask from 'react-input-mask';
 import { useForm } from 'react-hook-form';
 
 import { Menu } from '../../components/Menu';
+import { FooterText } from '../../components/Footer/FooterText';
+import { useRegister } from '../../hook/useRegister';
 
 import styles from './style.module.scss';
 
@@ -32,9 +34,10 @@ function RegisterPage(){
     const [adress, setAdress] = useState<AdressInterface>({} as AdressInterface);
     const {register, handleSubmit, formState:{errors}} = useForm();
     const history = useHistory();
+    const toRegister = useRegister;
 
     useEffect(() =>{
-        if(cep.length < 9){
+        if(cep.replaceAll('_','').length < 9){
           return
         }else{
             setCep(cep.replace('-',''));
@@ -46,33 +49,13 @@ function RegisterPage(){
             })
             .catch((error) => console.log('Failed to fetch'))
             }catch (err){
-              console.log('Tivemos um erro')
+              console.log('we had an error')
             }
         }
       },[cep])
       
       const onSubmit = (data: FormInputs) => {
-          localStorage.setItem('@name', data.name);
-          localStorage.setItem('@birth', data.birth);
-          localStorage.setItem('@document', data.document);
-          localStorage.setItem('@cep', data.cep);
-          localStorage.setItem('@road', adress.logradouro);
-          localStorage.setItem('@district', adress.bairro);
-          localStorage.setItem('@city', adress.localidade);
-          localStorage.setItem('@uf', adress.uf);
-          localStorage.setItem('@number', data.number);
-          localStorage.setItem('@complement', data.complement);
-
-          document.cookie=`name=${data.name}`
-          document.cookie=`birth=${data.birth}`
-          document.cookie=`document=${data.document}`
-          document.cookie=`cep=${data.cep}`
-          document.cookie=`road=${adress.logradouro}`
-          document.cookie=`district=${adress.bairro}`
-          document.cookie=`city=${adress.localidade}`
-          document.cookie=`uf=${adress.uf}`
-          document.cookie=`number=${data.number}`
-          document.cookie=`complement=${data.complement}`
+          toRegister(data, adress);
 
           history.push("/");
       };
@@ -202,6 +185,8 @@ function RegisterPage(){
                 >Registrar</button>
             </div>
         </form>
+
+        <FooterText />
         </>
     )
 }
