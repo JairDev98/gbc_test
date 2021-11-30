@@ -3,65 +3,89 @@
     box-sizing: border-box;
     flex-direction: column;
     background: url("../../../assets/Illustration.svg") no-repeat right;
-    background-size: 16%;
-
-    @media (max-width: 1440px) {
-        background-size: 30%;
-    }
-
-    @media (max-width: 1024px) {
-        background-size: 40%;
-    }
+    background-size: contain;
+    height: 37rem;
 
     @media (max-width: 768px) {
-        background-size: 60%;
+        background-size: 50%;
+        height: 20rem;
     }
     
     @media (max-width: 425px) {
-        width: 550px;
-        background-size: 72%;
-      }
+        background: none;
+      } 
 }
 
 .containerSearch{
     display: flex;
-    width: 200px;
-    margin: 5rem 0 3.8rem 4rem;
+    margin: auto 6rem;
+
+    @media (max-width: 1024px) {
+        margin: auto 2rem;
+    }
+
+    @media (max-width: 768px) {
+        margin: auto 1rem;
+    }
+
+    @media (max-width: 425px) {
+        margin: auto;
+        width: 320px;
+    }
+
+    @media (max-width: 320px) {
+        margin: auto 0.3rem;
+        width: 300px;
+    }
+
+    @media (max-width: 280px) {
+        margin: auto 0.2rem;
+        width: 270px;
+    }
 }
 
 .containerSubmit{
     display: flex;
-    width: 162px;
+    width: 400px;
     flex-direction: column;
+    
     h2{
+        font-size: 50px;
         color: var(--blue-font);
+
+        @media (max-width: 768px) {
+           font-size: 30px;
+        }
     }
 }
 
 .searchContainer{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
     input{
-        border-radius: 3px;
-        font-size: 8px;
-        width: 300px;
-        height: 25px;
+        border-radius: 0.18rem;
+        font-size: 1rem;
+        width: 20rem;
+        height: 2.5rem;
         border: 0.5px solid var(--blue-font);
-        margin-top: 0.7rem;
         text-indent: 5%;
+
+        @media (max-width: 768px) {
+            width: 15rem;
+         }
     }
 }
 
 .buttonSearch{
     cursor: pointer;
     display: flex;
-    height: 25px;
-    width: 25px;
-    padding: 4%;
+    width: 10%;
+    height: 100%;
     align-items: center;
+    justify-content: center;
     background-color: var(--lime-green);
     border-radius: 3px;
-    margin-top: 54%;
     margin-left: 3%;
     color: white;
     transition: all 0.3s ease;

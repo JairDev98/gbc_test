@@ -3,41 +3,52 @@
     box-sizing: border-box;
     flex-direction: column;
     background: url("../../../assets/bloco_services.svg") no-repeat left;
-    background-size: 16%;
-    padding: 17%;
-    
-    @media (max-width: 1440px) {
-        background-size: 30%;
-    }
-
-    @media (max-width: 1024px) {
-        background-size: 40%;
-    }
+    background-size: contain;
+    height: 37rem;
+    margin-top: 1rem;
 
     @media (max-width: 768px) {
-        background-size: 60%;
+        background-position-x: -8rem;
     }
     
     @media (max-width: 425px) {
-        width: 550px;
-        background-size: 72%;
+        background: none;
+      } 
+
+      @media (max-width: 375px) {
+        height: 36rem;
       }
 }
 
-.containerButton{
-    margin-left: 15rem;
-}
-
 .containerText{
-    margin-top: -3rem;
-    
-    width: 225px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto 40rem;
+
     h4{
+        font-size: 2rem;
         color: var(--blue-font)
     }
     p{
-        font-size: 9px;
-        margin: 1rem 0;
+        font-size: 1rem;
+        margin: 1.5rem 0;
         color: var(--gray-font)
     }
+
+    @media (max-width: 1024px) {
+        margin: auto 32rem;
+      }
+
+    @media (max-width: 768px) {
+        margin: auto 22rem;
+      }
+
+    @media (max-width: 425px) {
+        margin: auto;
+      }
+
+      @media (max-width: 375px) {
+        width: 270px;
+      }
 }

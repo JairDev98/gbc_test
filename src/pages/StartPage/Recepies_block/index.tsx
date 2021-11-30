@@ -44,6 +44,8 @@ export function Recepies(){
             <h2>Our Best Recipes</h2>
             <p>
                 Far far away, behind the world mountains, far from the countries
+            </p>
+            <p>    
                 Vakalia and Consonantia, there live the blind texts.
             </p>
         </div>

@@ -19,11 +19,11 @@ export function Card({ id, title, photo, name, author }: CardProps){
 
             <div className={styles.cardTextButton}>
                 <h4>{title}</h4>
-            </div>
 
-            <div className={styles.cardAuthor}>
-                <img src={author} alt={author}/>
-                <h5>{name}</h5>
+                <div className={styles.cardAuthor}>
+                    <img src={author} alt={author}/>
+                    <h5>{name}</h5>
+                </div>
             </div>
         </div>
         </>

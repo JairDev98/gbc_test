@@ -13,11 +13,11 @@ export function Footer(){
                 <h2>Join our membership to get special offer</h2>
                 <div className={styles.searchContainer}>
                     <input type="text" placeholder="Enter your email addres"/>
+                    
                 </div>
+                
             </div>
-                    <div className={styles.buttonSearch}>
-                        <Button text="Join" />
-                    </div>
+            <Button text="Join" />
         </div>
         </div>
         <FooterText />

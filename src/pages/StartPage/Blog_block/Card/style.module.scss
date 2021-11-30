@@ -1,12 +1,24 @@
 .card{
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     justify-content: center;
     flex-direction: column;
     border-radius: 3px;
-    box-shadow: 0px 8px 9px -8px gray;
-    width: 95%;
+    width: 80%;
     cursor: pointer;
+    box-shadow: 0px 0px 7px 0px gray;
+    transition: all 0.2s ease;
+    margin: 1rem;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 0.6rem;
+    }
+}
+
+.card:hover {
+    transform: scale(1.04);
 }
 
 .cardPhoto{   
@@ -16,33 +28,33 @@
 }
 
 .cardTextButton{ 
-    margin: 0.5rem 0.5rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin: 2rem 1.5rem;
+
     h4{
-        font-size: 12px;
+        font-size: 1.4rem;
         color: var(--blue-font)
     }
 
-    @media (max-width: 425px) {
-        margin: 0.1rem;
-      }
+    @media (max-width: 768px) {
+        margin: 1rem;
+    }
 }
 
 .cardAuthor{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin: 0.3rem  0.5rem;
+    margin-top: 1rem;
+    
     img{
         border-radius: 50%;
-        width: 10%;
-        height: 80%;
+        
+        width: 49px;
+        height: 50px;
     }
+
     h5{
         margin-left: 5px;
-        font-size: 8px;
+        font-size: 1rem;
         color: var(--gray-font);
     }
 }

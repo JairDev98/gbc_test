@@ -44,7 +44,7 @@ export function Blog(){
         },
         {
             id:4,
-            title: "What is good for you health blablabla?",
+            title: "What can be good for your health?",
             photo: bloco4,
             name: "Randy Watson",
             author: "https://images.unsplash.com/photo-1546456073-92b9f0a8d413?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
@@ -57,6 +57,8 @@ export function Blog(){
             <h2>Read Our Blog</h2>
             <p>
                 Far far away, behind the world mountains, far from the countries
+            </p>
+            <p>    
                 Vakalia and Consonantia, there live the blind texts.
             </p>
         </div>
@@ -90,6 +92,18 @@ export function Blog(){
                 }
         },
             ]}
+            breakpoints={{
+                425: {
+                    plugins: [
+                        {
+                            resolve: slidesToShowPlugin,
+                            options: {
+                                numberOfSlides: 1,
+                            }
+                        }
+                    ]
+                }
+            }}
             >
                 {cards.map(card =>( 
                    <Card id={card.id} author={card.author} name={card.name} photo={card.photo} title={card.title} /> 
