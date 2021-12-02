@@ -8,7 +8,12 @@ export function TopPage(){
     return(
         <>
         <div className={styles.container}>
-            < Menu title="REGISTER" url={'/registerpage'} key='1' />
+            < Menu title="REGISTER" url={'/registerpage'} key='1' 
+            items={[
+                'HEALTHY RECIPES',
+                'BLOG',
+                'JOIN'
+            ]}/>
 
             <div className={styles.containerSearch}>
             <div className={styles.containerSubmit}>

@@ -23,10 +23,12 @@
     align-items: center;
 
     h4{
-        cursor: pointer;
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--lime-green);
+        a{
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--lime-green);
+        }
 
         @media (max-width: 425px) {
             margin-bottom: 0.8rem;
@@ -64,6 +66,7 @@
     font-weight: 600;
     padding: 0.5rem 0;
     border-radius: 3px;
+
     background-color: white;
 
     @media (max-width: 425px) {

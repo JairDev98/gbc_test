@@ -5,19 +5,22 @@ import { Link } from 'react-router-dom';
 interface menuInterface{
     title: string;
     url: string;
+    items: string[];
 }
 
-export function Menu({ title, url }:menuInterface){
+export function Menu({ title, url, items }:menuInterface){
     return(
         <div className={styles.container}>
             <div className={styles.containerLeft}>
-                <h4>Healthy Food</h4>
+                <h4>
+                    <Link to={'/'}>Healthy Food</Link>
+                </h4>
             </div>
 
             <div className={styles.containerRight}>
-                <h4>HEALTHY RECIPES</h4>
-                <h4>BLOG</h4>
-                <h4>JOIN</h4>
+                {items.map(item => (
+                    <h4>{item}</h4>
+                ))}
                     <div className={styles.buttonElement}>
                         <h4>
                             <Link to={url}>{title}</Link>

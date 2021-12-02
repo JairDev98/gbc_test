@@ -62,32 +62,33 @@ function RegisterPage(){
 
     return(
         <>
-        <Menu title="RETURN" url="/" />
+        <Menu title="RETURN" url="/" items={[]} />
 
         <form className={styles.containerForm} onSubmit={handleSubmit(onSubmit)}>
-            <h3 className={styles.registerTitle} >Cadastro</h3>                     
-            <h4>Nome</h4>
+            <h3 className={styles.registerTitle}>REGISTER</h3>
+            <div className={styles.containerFormIntern}>                                    
+            <h4>Nome Completo <span>*</span></h4>
                 <input 
                     type="text" 
-                    placeholder="SEU NOME"
+                    placeholder="Nome Completo"
                     className={styles.inputLong}
                     {...register("name", {required: true})}
                 />
                 <div className={styles.errorContainer}>
-                    {errors.name?.type==='required' && 'COLOQUE O SEU NOME'}
+                    {errors.name?.type==='required' && 'INFORME O SEU NOME COMPLETO'}
                 </div>    
 
-            <h4>Data de nascimento</h4>          
+            <h4>Data de nascimento <span>*</span></h4>          
                 <input 
                     type="date" 
                     className={styles.inputShort}
                     {...register("birth", {required: true})}
                 />
                 <div className={styles.errorContainer}>
-                    {errors.birth?.type==='required' && 'COLOQUE A SUA DATA DE NASCIMENTO'}
+                    {errors.birth?.type==='required' && 'INFORME A SUA DATA DE NASCIMENTO'}
                 </div>    
                    
-            <h4>CPF</h4>  
+            <h4>CPF <span>*</span></h4>  
                 <InputMask 
                     placeholder="000.000.000-00"
                     mask="999.999.999-99"
@@ -95,10 +96,10 @@ function RegisterPage(){
                     {...register("document", {required: true})} 
                 />
                 <div className={styles.errorContainer}>
-                    {errors.document?.type==='required' && 'COLOQUE O SEU CPF'}
+                    {errors.document?.type==='required' && 'INFORME O SEU CPF'}
                 </div>
 
-            <h3 className={styles.addressTitle}>Endereço</h3>  
+            <h3 className={styles.addressTitle}>Endereço <span>*</span></h3>  
 
             <h4>CEP</h4>
             <InputMask  
@@ -107,41 +108,42 @@ function RegisterPage(){
                 className={styles.inputShort}
                 {...register("cep", {required: true})}
                 onChange={ e => { setCep(e.target.value)}}
-            />
+            /> 
+
             <div className={styles.errorContainer}>
-                {errors.cep?.type==='required' && 'COLOQUE O SEU CEP'}
-            </div>    
+                {
+                    cep === undefined || cep === '' ?
+                    errors.cep?.type==='required' && 'INFORME O SEU CEP': escape
+                }
+            </div> 
                   
             <h4>Rua</h4>
                 <input 
                     type="text" 
                     placeholder="Rua" 
                     className={styles.inputLong} 
-                    {...register("road")}
+                    {...register("road", {disabled: true})}
                     onChange={ e => { setAdress({...adress, logradouro:e.target.value}) }}
-                    disabled={true}
                     value={adress.logradouro}
-                />    
+                />     
 
             <h4>Bairro</h4>   
                 <input 
                     type="text" 
                     placeholder="Bairro" 
                     className={styles.inputLong} 
-                    {...register("district")}
+                    {...register("district", {disabled: true})}
                     onChange={ e => { setAdress({...adress, bairro:e.target.value}) }}
-                    disabled={true}
                     value={adress.bairro}
-                />    
+                />         
                    
             <h4>Cidade</h4>
                 <input 
                     type="text" 
                     placeholder="Cidade" 
                     className={styles.inputShort}
-                    {...register("city")}
+                    {...register("city", {disabled: true})}
                     onChange={ e => { setAdress({...adress, localidade:e.target.value}) }}
-                    disabled={true}
                     value={adress.localidade}
                 />    
 
@@ -150,13 +152,11 @@ function RegisterPage(){
                     type="text" 
                     placeholder="UF" 
                     className={styles.inputShort} 
-                    {...register("uf")}
+                    {...register("uf", {disabled: true})}
                     onChange={ e => { setAdress({...adress, uf:e.target.value}) }}
                     value={adress.uf}
-                    disabled={true}
                     maxLength={2}
-                />    
-                
+                />        
 
             <h4>N°</h4>
                 <input 
@@ -183,6 +183,7 @@ function RegisterPage(){
                     type="submit"
                     className={styles.buttonStyle}
                 >Registrar</button>
+            </div>
             </div>
         </form>
 
