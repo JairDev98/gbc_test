@@ -54,7 +54,7 @@ export function Blog(){
         <>
         <div className={styles.container}>
         <div className={styles.containerTitle}>
-            <h2>Read Our Blog</h2>
+            <h2 id="blog">Read Our Blog</h2>
             <p>
                 Far far away, behind the world mountains, far from the countries
             </p>
