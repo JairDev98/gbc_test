@@ -41,7 +41,8 @@ export function Recepies(){
        <>
     <div className={styles.container}>
         <div className={styles.containerTitle}>
-            <h2>Our Best Recipes</h2>
+            <h2 id="recipes">Our Best Recipes</h2>
+            
             <p>
                 Far far away, behind the world mountains, far from the countries
             </p>

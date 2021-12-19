@@ -10,9 +10,9 @@ export function TopPage(){
         <div className={styles.container}>
             < Menu title="REGISTER" url={'/registerpage'} key='1' 
             items={[
-               {item:'HEALTHY RECIPES', anchor:'teste'},
-               {item:'BLOG', anchor:'teste'},
-               {item:'JOIN', anchor:'teste'}
+               {item:'HEALTHY RECIPES', anchor:'#recipes'},
+               {item:'BLOG', anchor:'#blog'},
+               {item:'JOIN', anchor:'#join'}
             ]}/>
 
             <div className={styles.containerSearch}>

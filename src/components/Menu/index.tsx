@@ -24,7 +24,9 @@ export function Menu({ title, url, items }:menuInterface){
 
             <div className={styles.containerRight}>
                 {items.map(item => (
-                    <h4>{item.item}</h4>
+                    <h4>
+                        <a href={item.anchor}>{item.item}</a>
+                    </h4>
                 ))}
                     <div className={styles.buttonElement}>
                         <h4>

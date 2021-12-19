@@ -10,7 +10,7 @@ export function Footer(){
 
             <div className={styles.containerSearch}>
             <div className={styles.containerSubmit}>
-                <h2>Join our membership to get special offer</h2>
+                <h2 id="join">Join our membership to get special offer</h2>
                 <div className={styles.searchContainer}>
                     <input type="text" placeholder="Enter your email addres"/>
                     
